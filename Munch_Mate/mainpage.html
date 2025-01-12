@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Cards in Row</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+          rel="stylesheet" 
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+          crossorigin="anonymous">
+  </head>
+  <body>
+    <a href="index.html" class="btn btn-primary" tabindex="-1" role="button" aria-disabled="true">Log out</a>
+    
+    
+    <h1 class="text-center mt-5 fs-1 fw-bold" style="color: #00345c;">Select the canteen</h1>
+    <div class="container my-5 mt-5">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <div class="col">
+          <div class="card h-100" style="width: 18rem;">
+            <img src="canteen img 1.jpg" class="card-img" alt="">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">canteen 1</h5>
+              <p class="card-text">A campus favorite, our Classic Canteen offers affordable meals with the taste you love. From piping-hot samosas and vada pav to hearty thalis and refreshing lassi, every item is freshly prepared and served with care. It's the ideal spot to grab a quick breakfast, sip tea during breaks, or enjoy a chat with friends. With a mix of snacks, full meals, and beverages, we ensure you have everything you need to power through your day.</p>
+              <a href="dashboard.html" class="btn btn-primary">proceed</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100" style="width: 18rem;">
+            <img src="canteen img 2.jpg" class="card-img" alt="">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">canteen 2</h5>
+              <p class="card-text">Our canteen offers a variety of delicious, nutritious vegetarian meals, snacks, and refreshing beverages. With a friendly atmosphere, quick service, and real-time payment options, it’s the perfect spot to recharge between classes.</p>
+              <a href="dashbord2.html" class="btn btn-primary">proceed</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100" style="width: 18rem;">
+            <img src="canteen img 3.jpg" class="card-img" alt="">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">canteen 3</h5>
+              <p class="card-text">Looking for a quick bite between classes or meetings? Our modern grab-and-go canteen ensures you’re fueled up with minimal hassle. We offer everything from hot coffees to freshly prepared wraps, snacks, and juices. With digital payments, self-checkout kiosks, and real-time order tracking, it’s all about convenience. You can even pre-order your meal using our app and pick it up without waiting in line!</p>
+              <a href="dashbord3.html" class="btn btn-primary">proceed</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100" style="width: 18rem;">
+            <img src="canteen img 4.jpg" class="card-img" alt="">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">canteen 4</h5>
+              <p class="card-text">Step into the comfort canteen, where familiar flavors and homestyle cooking come together. Whether you crave classic curries, comforting chapatis, or steaming chai, our menu is crafted to give you a taste of home. With cozy seating, warm lighting, and friendly staff, it’s the perfect spot to relax, study, or chat with friends. We also offer daily specials to keep things exciting, so there’s always something new to try!</p>
+              <a href="dashbord4.html" class="btn btn-primary">proceed</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+            crossorigin="anonymous">
+            function searchItems() {
+                const query = document.getElementById('search-bar').value.toLowerCase();
+                const menus = document.getElementsByClassName('canteen-menu');
+        
+                for (let i = 0; i < menus.length; i++) {
+                    const items = menus[i].getElementsByTagName('td');
+                    let found = false;
+        
+                    for (let j = 0; j < items.length; j++) {
+                        const text = items[j].textContent.toLowerCase();
+                        if (text.includes(query)) {
+                            items[j].parentElement.style.display = '';
+                            found = true;
+                        } else {
+                            items[j].parentElement.style.display = 'none';
+                        }
+                    }
+                    menus[i].style.display = found ? 'block' : 'none';
+                }
+            }
+    </script>
+  </body>
+</html>

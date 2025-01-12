@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canteen Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h2 class="welcome">Welcome to the Canteen Dashboard</h2>
+        <p>Select your favorite items from the categories below:</p>
+
+        <!-- Wallet Balance and Cart Button -->
+        <div class="wallet-cart">
+            <div class="wallet">
+                <h3 class="balance">Wallet Balance: ₹<span id="wallet-balance">1600.00</span></h3>
+                <button class="Btn1" onclick="location.href='wallet.html'">Go to Wallet</button>
+            </div>
+            <div class="cart-button">
+                <button  class="Btn2" onclick="location.href='cart.html'">Cart</button>
+            </div>
+        </div>
+
+        <!-- Categories Navigation -->
+        <div class="categories">
+            <button onclick="showCategory('juices')">Juices</button>
+            <button onclick="showCategory('food')">Food</button>
+            <button onclick="showCategory('snacks')">Snacks</button>
+            <button onclick="showCategory('chips')">Chips</button>
+        </div>
+
+        <!-- Category Sections with Images and 20 Items Each -->
+        <div id="juices" class="category-section">
+            <h3 class="juice">Juices</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Juice Item</th>
+                        <th>Price (₹)</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Example Items (Add up to 20) -->
+                    <tr>
+                        <td><img src="D:\images canteen\OIP.jpg" alt="Pineapple Juice" width="50"> Pineapple Juice</td>
+                        <td>₹99.00</td>
+                        <td><button onclick="addToCart('Pineapple Juice', 99.00)">Add to Cart</button></td>
+                    </tr>
+                    <tr>
+                        <td><img src="D:\images canteen\OIP.jpeg" alt="Apple Juice" width="50"> Apple Juice</td>
+                        <td>₹89.00</td>
+                        <td><button onclick="addToCart('Apple Juice', 89.00)">Add to Cart</button></td>
+                    </tr>
+                    <tr>
+                        <td><img src="D:\images canteen\OIP (3).jpg" alt="Beetroot Juice" width="50"> Beetroot Juice</td>
+                        <td>₹119.00</td>
+                        <td><button onclick="addToCart('Beetroot Juice', 119.00)">Add to Cart</button></td>
+                    </tr>
+                    <!-- Add more juice items here -->
+                    <!-- Example: -->
+                    <tr>
+                        <td><img src="D:\images canteen\OIP (1).jpg" alt="Anjeer Juice" width="50"> Anjeer Juice</td>
+                        <td>₹109.00</td>
+                        <td><button onclick="addToCart('Anjeer Juice', 109.00)">Add to Cart</button></td>
+                    </tr>
+                    <!-- Continue adding up to 20 items -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id="food" class="category-section" style="display:none;">
+            <h3>Food</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Food Item</th>
+                        <th>Price (₹)</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Example Items (Add up to 20) -->
+                    <tr>
+                        <td><img src="D:\images canteen\OIP (7).jpg" alt="Idli" width="50"> Idli</td>
+                        <td>₹199.00</td>
+                        <td><button onclick="addToCart('Idli', 199.00)">Add to Cart</button></td>
+                    </tr>
+                    <tr>
+                        <td><img src="D:\images canteen\cheese.jpeg" alt="Cheese Burger" width="50"> Cheese Burger</td>
+                        <td>₹149.00</td>
+                        <td><button onclick="addToCart('Cheese Burger', 149.00)">Add to Cart</button></td>
+                    </tr>
+                    <tr>
+                        <td><img src="D:\images canteen\OIP (6).jpg" alt="Momos" width="50"> Momos</td>
+                        <td>₹89.00</td>
+                        <td><button onclick="addToCart('Momos', 89.00)">Add to Cart</button></td>
+                    </tr>
+                    <!-- Add more food items here -->
+                    <!-- Example: -->
+                    <tr>
+                        <td><img src="D:\images canteen\pasta.jpeg" alt="Pasta Alfredo" width="50"> Pasta Alfredo</td>
+                        <td>₹159.00</td>
+                        <td><button onclick="addToCart('Pasta Alfredo', 159.00)">Add to Cart</button></td>
+                    </tr>
+                    <!-- Continue adding up to 20 items -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id="snacks" class="category-section" style="display:none;">
+            <h3>Snacks</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Snack Item</th>
+                        <th>Price (₹)</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Example Items (Add up to 20) -->
+                    <tr>
+                        <td><img src="D:\images canteen\salad.jpeg" alt="Veggie Salad" width="50"> Veggie Salad</td>
+                        <td>₹89.00</td>
+                        <td><button onclick="addToCart('Veggie Salad', 89.00)">Add to Cart</button></td>
+                    </tr>
+                    <tr>
+                        <td><img src="D:\images canteen\fries.jpeg" alt="Fries" width="50"> Fries</td>
+                        <td>₹59.00</td>
+                        <td><button onclick="addToCart('Fries', 59.00)">Add to Cart</button></td>
+                    </tr>
+                    <tr>
+                        <td><img src="D:\images canteen\baked-spring-rolls-sq.jpg" alt="Spring Rolls" width="50"> Spring Rolls</td>
+                        <td>₹99.00</td>
+                        <td><button onclick="addToCart('Spring Rolls', 99.00)">Add to Cart</button></td>
+                    </tr>
+                    <!-- Add more snack items here -->
+                    <!-- Example: -->
+                    <tr>
+                        <td><img src="D:\images canteen\sandwich.jpeg" alt="Sandwich" width="50"> Sandwich</td>
+                        <td>₹149.00</td>
+                        <td><button onclick="addToCart('Sandwich', 149.00)">Add to Cart</button></td>
+                    </tr>
+                    <!-- Continue adding up to 20 items -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id="chips" class="category-section" style="display:none;">
+            <h3>Chips</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Chips Item</th>
+                        <th>Price (₹)</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Example Items (Add up to 20) -->
+                    <tr>
+                        <td><img src="D:\images canteen\chips.jpeg" alt="Potato Chips" width="50"> Potato Chips</td>
+                        <td>₹49.00</td>
+                        <td><button onclick="addToCart('Potato Chips', 49.00)">Add to Cart</button></td>
+                    </tr>
+                    <tr>
+                        <td><img src="D:\images canteen\nachos.jpeg" alt="Nachos" width="50"> Nachos</td>
+                        <td>₹69.00</td>
+                        <td><button onclick="addToCart('Nachos', 69.00)">Add to Cart</button></td>
+                    </tr>
+                    <tr>
+                        <td><img src="D:\images canteen\cheese puff.jpeg" alt="Cheese Puffs" width="50"> Cheese Puffs</td>
+                        <td>₹39.00</td>
+                        <td><button onclick="addToCart('Cheese Puffs', 39.00)">Add to Cart</button></td>
+                    </tr>
+                    <!-- Add more chips items here -->
+                    <!-- Example: -->
+                    <tr>
+                        <td><img src="D:\images canteen\onion ring.jpeg" alt="Onion Rings" width="50"> Onion Rings</td>
+                        <td>₹59.00</td>
+                        <td><button onclick="addToCart('Onion Rings', 59.00)">Add to Cart</button></td>
+                    </tr>
+                    <!-- Continue adding up to 20 items -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let walletBalance = parseFloat(localStorage.getItem('walletBalance')) || 1600.00;
+
+        // Initialize wallet balance
+        document.getElementById('wallet-balance').textContent = walletBalance.toFixed(2);
+
+        function addToCart(item, price) {
+            cart.push({ item, price });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${item} added to cart.`);
+        }
+
+        function showCategory(category) {
+            // Hide all category sections
+            var sections = document.getElementsByClassName('category-section');
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].style.display = 'none';
+            }
+
+            // Show the selected category
+            document.getElementById(category).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
+
+
+
+
